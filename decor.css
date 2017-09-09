@@ -1,0 +1,33 @@
+#decor{position:absolute;bottom:0;width:100%}
+.decor{
+	display:inline-block;
+	background:#d4e2ff;
+	position:absolute;
+	animation-name: animateBlock;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	bottom:0;
+	
+}
+.flyout{
+	display:inline-block;
+	background:#91c6ff;
+	position:absolute;
+	bottom:0;
+	animation-name:flyout;
+	animation-duration:2s;
+}
+
+@keyframes animateBlock{
+	0%, 100% { transform: translate3d(0, 0, 0); opacity:0}
+	25%,75%{opacity:1}
+	50% { transform: translate3d(0, -20px, 0); opacity:0}
+	
+}
+
+@keyframes flyout{
+	0%   { opacity:0; transform: translate3d(0, 0, 0)}
+	25%  { opacity:1; transform: translate3d(0,-40,0) }
+	100% { opacity:0; transform: translate3d(0, -300px, 0)}
+	
+}
